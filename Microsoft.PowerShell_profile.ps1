@@ -9,4 +9,4 @@ Set-Theme Agnoster
 Import-Module PSConsoleTheme
 Set-ConsoleTheme 'Solarized Dark'
 
-function ll { dir -Force }
+function ll { Get-ChildItem -Force }

@@ -3,10 +3,12 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
 }
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Agnoster
-Import-Module PSConsoleTheme
-Set-ConsoleTheme 'Solarized Dark'
 
-function ll { dir -Force }
+Import-Module oh-my-posh
+Import-Module posh-git
+Import-Module PSConsoleTheme
+
+Set-ConsoleTheme 'Solarized Dark'
+Set-Theme Agnoster
+
+function ll { Get-ChildItem -Force }
