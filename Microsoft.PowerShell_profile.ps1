@@ -12,5 +12,5 @@ Set-ConsoleTheme 'Solarized Dark'
 Set-Theme Agnoster
 
 function ll { Get-ChildItem -Force }
-function .. { cd .. }
-function ... { cd ..\.. }
+function .. { Set-Location .. }
+function ... { Set-Location ..\.. }
