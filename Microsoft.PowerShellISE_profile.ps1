@@ -11,6 +11,8 @@ if (Test-Path($ChocolateyProfile)) {
 Set-ConsoleTheme 'Solarized Dark'
 Set-Theme Agnoster
 
-function ll { Get-ChildItem -Force }
 function .. { Set-Location .. }
 function ... { Set-Location ..\.. }
+function ll { Get-ChildItem -Force }
+function ws { Set-Location $Home\Documents\workspace }
+
