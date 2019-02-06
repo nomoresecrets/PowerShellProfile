@@ -14,4 +14,5 @@ Set-Theme Agnoster
 function .. { Set-Location .. }
 function ... { Set-Location ..\.. }
 function ll { Get-ChildItem -Force }
+function tail { Get-Content -Wait }
 function ws { Set-Location $Home\Documents\workspace }
