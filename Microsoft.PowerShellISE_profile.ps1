@@ -38,3 +38,4 @@ function ... { Set-Location ..\.. }
 function ll { Get-ChildItem -Force }
 function tailf { Get-Content -Wait }
 function ws { Set-Location $Home\Documents\workspace }
+function grep { $input | Out-String -Stream | Select-String $args }
