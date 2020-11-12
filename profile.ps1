@@ -10,6 +10,8 @@ Register-EngineEvent PowerShell.Exiting -Action { Get-History | Export-Clixml $H
 if (Test-path $HistoryFilePath) { Import-Clixml $HistoryFilePath | Add-History }
 
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+Set-PSReadLineOption -PredictionSource History
+
 Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadLineKeyHandler -Key Alt+d -Function ShellKillWord
@@ -20,6 +22,7 @@ Set-PSReadLineKeyHandler -Key Alt+B -Function SelectShellBackwardWord
 Set-PSReadLineKeyHandler -Key Alt+F -Function SelectShellForwardWord
 Set-PSReadlineKeyHandler -Key ctrl+d -Function ViExit
 Set-PSReadlineKeyHandler -Key ctrl+s -Function ClearScreen
+
 Remove-PSReadlineKeyHandler 'Ctrl+r'
 
 
@@ -31,6 +34,7 @@ Import-Module PSConsoleTheme
 Set-ConsoleTheme 'Solarized Dark'
 Set-Theme Agnoster
 
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 
 function .. { Set-Location .. }

@@ -30,6 +30,7 @@ Import-Module PSConsoleTheme
 
 Set-ConsoleTheme 'Solarized Dark'
 Set-Theme Agnoster
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 
 
