@@ -26,7 +26,8 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: update and install powershell
+      - name: apt update, install powershell and psscriptanalyzer
         run: |
           sudo apt update
           sudo apt install powershell
+          pwsh -Command { Install-Module -Name PSScriptAnalyzer }
