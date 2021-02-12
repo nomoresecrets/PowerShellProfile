@@ -28,5 +28,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: update and install powershell
         run: |
-          apt update
-          apt install powershell
+          sudo apt update
+          sudo apt install powershell
