@@ -31,3 +31,4 @@ jobs:
           sudo apt update
           sudo apt install powershell
           pwsh -Command { Install-Module -Name PSScriptAnalyzer }
+          pwsh -Command { Get-InstalledModule }
